@@ -1,5 +1,7 @@
 
-# Foundry Courier – Darknet Continuum Toolkit
+# Foundry Courier Toolkit
+
+> Darknet Continuum
 
 ![Cross-Platform](https://img.shields.io/badge/OS-Windows%20%7C%20Linux%20%7C%20Mac%20%7C%20Android%20%7C%20TUI-informational)
 ![No Internet Required](https://img.shields.io/badge/Offline-Ready-success)

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundry Courier | ARTIFACT VIRTUAL</title>
+  <title>Foundry Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Lexend:wght@200;400;700&display=swap" rel="stylesheet">
   <style>
     html, body {
       height: 100%;
@@ -11,75 +12,77 @@
       padding: 0;
       background: #000;
       color: #e0e0e0;
-      font-family: 'Inter', 'Consolas', 'Menlo', 'Monaco', monospace;
+      font-family: 'Inter', 'Lexend', 'Consolas', 'Menlo', 'Monaco', monospace;
       min-height: 100vh;
     }
     body {
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
       background: #000 url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><g opacity="0.08"><path d="M0 80 Q 80 0 160 80 T 320 80 T 480 80 T 640 80 T 800 80" stroke="%23e0e0e0" stroke-width="0.5" fill="none"/><path d="M0 160 Q 80 80 160 160 T 320 160 T 480 160 T 640 160 T 800 160" stroke="%23e0e0e0" stroke-width="0.5" fill="none"/></g></svg>') repeat;
       background-size: cover;
-    }
-      header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 2rem 2.5rem 1.5rem 2.5rem;
-        border-bottom: 1px solid #222;
-        background: rgba(0,0,0,0.98);
-        box-shadow: 0 1px 0 0 #111;
-      }
-      .logo {
-        height: 38px;
-        width: auto;
-        margin-right: 1.2rem;
-        display: block;
-        filter: brightness(0.95) grayscale(0.1);
-      }
-      .header-title {
-        font-family: 'Lexend', 'Montserrat', sans-serif;
-        font-weight: 700;
-        font-size: 1.5rem;
-        letter-spacing: 0.18em;
-        color: #fff;
-        text-transform: uppercase;
-        flex: 1;
-        text-align: left;
-      }
-    main {
-      flex: 1;
       display: flex;
       flex-direction: column;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 2rem 2.5rem 1.5rem 2.5rem;
+      border-bottom: 1px solid #222;
+      background: rgba(0,0,0,0.98);
+      box-shadow: 0 1px 0 0 #111;
+    }
+    .logo {
+      height: 38px;
+      width: auto;
+      margin-right: 1.2rem;
+      display: block;
+      filter: brightness(0.95) grayscale(0.1);
+    }
+    .center-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 3rem 2rem 2rem 2rem;
+      min-height: 0;
+    }
+    .card {
+      background: rgba(10,10,10,0.98);
+      border-radius: 22px;
+      box-shadow: 0 2px 24px 0 #000a;
+      padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+      max-width: 600px;
+      width: 100%;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin: 0 0 1.5rem 0;
+      font-family: 'Lexend', 'Inter', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 200;
+      margin: 0 0 1.2rem 0;
       color: #fff;
-      letter-spacing: 0.05em;
-      text-transform: none;
+      letter-spacing: 0.04em;
+      text-align: center;
     }
     h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin: 0 0 2.5rem 0;
+      font-family: 'Inter', 'Lexend', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 200;
+      margin: 0 0 2.2rem 0;
       color: #aaa;
-      letter-spacing: 0.02em;
-      text-transform: none;
+      letter-spacing: 0.01em;
+      text-align: center;
     }
     section {
-      margin-bottom: 2.5rem;
+      width: 100%;
+      margin-bottom: 2.1rem;
     }
     .divider {
       border: none;
       border-top: 1px solid #222;
-      margin: 2.5rem 0;
+      margin: 2.2rem 0;
     }
     ul, li {
       margin: 0;
@@ -87,13 +90,35 @@
       list-style: none;
     }
     .features li {
-      font-size: 1.05rem;
-      margin-bottom: 0.7rem;
+      font-size: 1.01rem;
+      margin-bottom: 0.6rem;
       color: #e0e0e0;
       border-left: 2px solid #333;
       padding-left: 1.1em;
-      line-height: 1.7;
+      line-height: 1.6;
     }
+    .subtle {
+      font-family: 'Lexend', 'Inter', sans-serif;
+      font-size: 1.02rem;
+      color: #6cf;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+    }
+    .code-block {
+      background: #111;
+      color: #e0e0e0;
+      font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+      font-size: 0.98rem;
+      border-radius: 10px;
+      padding: 1.1em 1.2em;
+      margin-bottom: 0.7em;
+      margin-top: 0.2em;
+      overflow-x: auto;
+      box-shadow: 0 1px 8px 0 #0006;
+    }
+    a { color: #6cf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     .footer {
       width: 100%;
       text-align: right;
@@ -105,62 +130,63 @@
       letter-spacing: 0.08em;
     }
     @media (max-width: 700px) {
-      main { padding: 2rem 1rem; }
+      .card { padding: 1.5rem 0.7rem; }
       header, .footer { padding: 1.2rem 1rem; }
-      h1 { font-size: 1.5rem; }
+      h1 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
-    <header>
-  <img src="logo/av-black-logo-removebg-preview.png" alt="Logo" class="logo" />
-    </header>
-  <main>
-    <h1>Foundry Courier</h1>
-    <h2>Darknet Continuum Toolkit<br>Carrier-agnostic, field-resilient, minimal.</h2>
-    <section>
-      <ul class="features">
-        <li>Move signed blockchain transactions over radio, mesh, SMS, sneakernet, or any data carrier.</li>
-        <li>Text-based, portable, and runs on minimal hardware (USB, microSD, old phones, smartwatches with terminal access).</li>
-        <li>Encode/decode with CRC32 and parity for error correction.</li>
-        <li>Broadcast to Bitcoin and Ethereum networks, or via HTTP/SMS gateway.</li>
-        <li>Offline documentation and universal CLI/TUI interface.</li>
-        <li>Designed for extreme resilience and operational security.</li>
-      </ul>
-    </section>
-    <hr class="divider" />
-    <section>
-      <h2 style="color:#888;font-size:1.05rem;font-weight:400;">Project and documentation: <a href="https://github.com/Artifact-Virtual/foundry" style="color:#6cf;text-decoration:none;">github.com/Artifact-Virtual/foundry</a></h2>
-    </section>
+  <header>
+    <img src="logo/av-black-logo-removebg-preview.png" alt="Logo" class="logo" />
+  </header>
+  <div class="center-wrap">
+    <div class="card">
+      <h1>Foundry Courier</h1>
+      <h2>Darknet Continuum Toolkit<br>Carrier-agnostic, field-resilient, minimal.</h2>
+      <section>
+        <ul class="features">
+          <li>Move signed blockchain transactions over radio, mesh, SMS, sneakernet, or any data carrier.</li>
+          <li>Text-based, portable, and runs on minimal hardware (USB, microSD, old phones, smartwatches with terminal access).</li>
+          <li>Encode/decode with CRC32 and parity for error correction.</li>
+          <li>Broadcast to Bitcoin and Ethereum networks, or via HTTP/SMS gateway.</li>
+          <li>Offline documentation and universal CLI/TUI interface.</li>
+          <li>Designed for extreme resilience and operational security.</li>
+        </ul>
+      </section>
+      <hr class="divider" />
+      <section>
+        <div class="subtle">Project and documentation: <a href="https://github.com/Artifact-Virtual/foundry">github.com/Artifact-Virtual/foundry</a></div>
+      </section>
       <section>
         <div class="subtle">Getting Started</div>
         <div class="code-block"># 1. Install Python 3.11+ and dependencies
-  python -m venv .venv && .venv\Scripts\activate
-  pip install -r requirements.txt
+python -m venv .venv && .venv\Scripts\activate
+pip install -r requirements.txt
 
-  # 2. Encode a signed transaction
-  python courier_cli.py encode-tx --hex &lt;SIGNED_TX_HEX&gt; --output frames.txt
+# 2. Encode a signed transaction
+python courier_cli.py encode-tx --hex &lt;SIGNED_TX_HEX&gt; --output frames.txt
 
-  # 3. Decode frames
-  python courier_cli.py decode-frames --input frames.txt --output recovered.hex
+# 3. Decode frames
+python courier_cli.py decode-frames --input frames.txt --output recovered.hex
 
-  # 4. Broadcast to Ethereum
-  python courier_cli.py push-eth --hex &lt;SIGNED_TX_HEX&gt; --rpc-url &lt;ETH_RPC_URL&gt;
+# 4. Broadcast to Ethereum
+python courier_cli.py push-eth --hex &lt;SIGNED_TX_HEX&gt; --rpc-url &lt;ETH_RPC_URL&gt;
 
-  # 5. Broadcast to Bitcoin
-  python courier_cli.py push-btc --hex &lt;SIGNED_TX_HEX&gt; --rpc-url &lt;BTC_RPC_URL&gt; --user &lt;USER&gt; --password &lt;PWD&gt;
-  </div>
+# 5. Broadcast to Bitcoin
+python courier_cli.py push-btc --hex &lt;SIGNED_TX_HEX&gt; --rpc-url &lt;BTC_RPC_URL&gt; --user &lt;USER&gt; --password &lt;PWD&gt;
+</div>
       </section>
       <section>
         <div class="subtle">Code Example: Encode/Decode in Python</div>
         <div class="code-block">from courier.foundry_courier import encode_frames, decode_frames
 
-  # Encode
-  frames = encode_frames('deadbeef...')
+# Encode
+frames = encode_frames('deadbeef...')
 
-  # Decode
-  raw = decode_frames(frames)
-  </div>
+# Decode
+raw = decode_frames(frames)
+</div>
       </section>
       <section>
         <div class="subtle">Troubleshooting</div>
@@ -176,22 +202,4 @@
         <div class="subtle">Project Philosophy</div>
         <ul class="features">
           <li>Text-based first: Works on any OS, terminal, or device (including Termux, smartwatches, old phones).</li>
-          <li>Portable Python: Bundle on USB/microSD, run anywhere with Python or as a standalone executable.</li>
-          <li>Minimal dependencies: No heavy libraries, easy to audit and maintain.</li>
-          <li>Offline docs: All commands in <span style="color:#6cf;">commands.lib</span> for field reference.</li>
-          <li>Universal UI: TUI/CLI for maximum compatibility; QR/barcode support possible for smart devices.</li>
-          <li>No private keys ever: Always sign offline, only move signed payloads.</li>
-          <li>Legal & safe: Respect radio laws, never transmit keys, repeat for reliability.</li>
-        </ul>
-      </section>
-      <hr class="divider" />
-      <section>
-        <div class="subtle">Repository & Documentation</div>
-        <div class="code-block">https://github.com/Artifact-Virtual/foundry</div>
-      </section>
-  </main>
-  <div class="footer">
-    &copy; 2025. All Rights Reserved.
-  </div>
-</body>
-</html>
+          <li>Portable Python: Bundle on USB/microSD, run anywhere with Python or as a

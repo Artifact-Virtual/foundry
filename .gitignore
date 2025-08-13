@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+*.env
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Test/output
+*.log
+*.bak
+*.swp
+*.tmp
+examples/frames.txt
+examples/signed_tx.hex
+recovered.hex
+frames.txt

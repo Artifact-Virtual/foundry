@@ -1,0 +1,49 @@
+# courier-cli: Command Reference
+
+This file documents all available commands for the courier-cli terminal tool.
+
+---
+
+## Command: list-services
+
+Description: List all available services and routes.
+Usage: courier-cli list-services
+
+---
+
+## Command: encode-tx
+
+Description: Encode a signed transaction (hex) into frames for transmission.
+Usage: courier-cli encode-tx --hex <SIGNED_TX_HEX> [--frame-size 64] [--group-size 8] [--no-parity]
+
+---
+
+## Command: decode-frames
+
+Description: Decode frames back into raw transaction bytes.
+Usage: courier-cli decode-frames --input <FRAMES_FILE>
+
+---
+
+## Command: push-btc
+
+Description: Broadcast a raw Bitcoin transaction to the network.
+Usage: courier-cli push-btc --hex <SIGNED_TX_HEX> [--rpc-url <URL>] [--user <USER>] [--password <PWD>]
+
+---
+
+## Command: push-eth
+
+Description: Broadcast a raw Ethereum transaction to the network.
+Usage: courier-cli push-eth --hex <SIGNED_TX_HEX> [--rpc-url <URL>]
+
+---
+
+## Command: help
+
+Description: Show help and usage for all commands.
+Usage: courier-cli help
+
+---
+
+# Add new commands below following the same format.

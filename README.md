@@ -60,21 +60,26 @@ python courier_cli.py list-services
 ## Usage Examples
 
 ### Encode a signed transaction
+
 ```bash
+$ export SVNEVM_HMAC=change_me_strong_key   # or pass --allow-insecure-default-key for lab only
 python courier_cli.py encode-tx --hex <SIGNED_TX_HEX> --output frames.txt
 ```
 
 ### Decode frames
+
 ```bash
 python courier_cli.py decode-frames --input frames.txt --output recovered.hex
 ```
 
 ### Broadcast to Ethereum
+
 ```bash
 python courier_cli.py push-eth --hex <SIGNED_TX_HEX> --rpc-url <ETH_RPC_URL>
 ```
 
 ### Broadcast to Bitcoin
+
 ```bash
 python courier_cli.py push-btc --hex <SIGNED_TX_HEX> --rpc-url <BTC_RPC_URL> --user <USER> --password <PWD>
 ```
@@ -86,6 +91,7 @@ python courier_cli.py push-btc --hex <SIGNED_TX_HEX> --rpc-url <BTC_RPC_URL> --u
 This project includes a full end-to-end test suite to ensure all core functionality works as expected.
 
 ### Run all tests
+
 ```bash
 python test_end_to_end.py
 ```
